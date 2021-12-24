@@ -1,0 +1,55 @@
+{
+  "name": "what-can-you-make",
+  "version": "1.0.0",
+  "description": "it's a take home test",
+  "main": "index.js",
+  "author": "zeal-devs",
+  "license": "WTFPL",
+  "private": true,
+  "workspaces": [
+    "backend/",
+    "frontend/"
+  ],
+  "scripts": {
+    "vsc": "sdks vscode",
+    "build": "yarn workspaces foreach -piv --topological-dev -j 2 run build",
+    "lint": "yarn workspaces foreach -ptv -j 2 run lint",
+    "start": "yarn workspaces foreach -piv -j 2 run start"
+  },
+  "devDependencies": {
+    "@babel/core": "7.14.8",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/plugin-proposal-object-rest-spread": "7.14.7",
+    "@babel/plugin-transform-runtime": "7.14.5",
+    "@babel/preset-env": "7.14.9",
+    "@babel/preset-react": "7.14.5",
+    "@babel/preset-typescript": "7.14.5",
+    "@babel/runtime": "7.14.8",
+    "@types/node": "14.17.15",
+    "@typescript-eslint/eslint-plugin": "4.28.1",
+    "@typescript-eslint/parser": "4.22.1",
+    "@yarnpkg/pnpify": "3.0.0-rc.14",
+    "@yarnpkg/sdks": "2.4.1-rc.4",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.2.2",
+    "babel-plugin-named-asset-import": "0.3.7",
+    "babel-preset-react-app": "9.1.2",
+    "esbuild": "0.12.18",
+    "esbuild-register": "2.6.0",
+    "nodemon": "2.0.7",
+    "prettier": "2.3.2",
+    "typescript": "4.2.4"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "dependenciesMeta": {
+    "html-pdf@3.0.1": {
+      "unplugged": true
+    },
+    "mongoose@5.12.7": {
+      "unplugged": true
+    }
+  },
+  "packageManager": "yarn@3.0.0"
+}
